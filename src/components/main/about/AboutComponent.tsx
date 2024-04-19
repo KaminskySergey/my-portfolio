@@ -8,7 +8,7 @@ interface IAboutComponent {}
 
 export default function AboutComponent({}: IAboutComponent) {
     return <ContainerMain>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 p-6">
         <div>
         <Title title="About" />
         <MyDescription />

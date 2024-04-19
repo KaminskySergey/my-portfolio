@@ -5,5 +5,5 @@ interface IContainerMain {
 }
 
 export default function ContainerMain({children}: IContainerMain) {
-    return <section className="p-6 rounded-md">{children}</section>
+    return <section className="rounded-md">{children}</section>
 }
