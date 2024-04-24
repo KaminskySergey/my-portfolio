@@ -13,10 +13,5 @@ export const navigation = [
       id: 3,
       path: '/works.svg',
       name: 'works'
-    },
-    {
-        id: 4,
-        path: '/blog.svg',
-        name: 'blog'
-      }
+    }
   ];

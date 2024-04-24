@@ -13,7 +13,7 @@
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 25% 1fr 8%; /* Adjust column widths as needed */
+  grid-template-columns: 1fr; 
   grid-template-rows: auto 1fr;
   grid-gap: 20px;
   height: auto;
@@ -22,20 +22,19 @@
 .aside {
   grid-column: 1;
   background-color: white;
-  height: 796px;
+  height: auto;
 }
 
 .content {
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-column: 2; /* Ensure content spans the second column */
+  grid-column: 1; /* Изменяем grid-column на 1 для .content */
 }
 
 .header {
-  grid-column: 3; /* Ensure header spans the third column */
+  grid-column: 1; /* Изменяем grid-column на 1 для .header */
   background-color: white;
 }
-
 .main {
   background-color: white;
 }
@@ -43,31 +42,29 @@
 /* Медиа-запросы для адаптивности */
 
 /* Таблетки и мобильные устройства */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 25% 1fr 8%; 
+  grid-template-rows: auto 1fr;
   }
 
   .aside {
     grid-row: auto;
+    height: auto;
   }
 
   .content {
-    grid-row: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-column: 2; /* Ensure content spans the second column */
   }
-}
-
-/* Мобильные устройства */
-@media only screen and (max-width: 480px) {
+  
   .header {
-    font-size: 18px;
-  }
-
-  .main {
-    font-size: 16px;
+    grid-column: 3; /* Ensure header spans the third column */
+    background-color: white;
   }
 }
+
 
 
 
@@ -124,3 +121,6 @@
 .logos-slide div {
   margin: 0 20px;
 }
+
+
+

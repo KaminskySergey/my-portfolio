@@ -9,7 +9,6 @@ interface IHeader { }
 
 export default function Header({ }: IHeader) {
     const pathname = usePathname()
-    console.log(pathname)
     return <header className="header rounded-md bg-white">
         <nav className="p-4">
             <ul className="flex flex-col items-center">

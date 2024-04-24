@@ -1,8 +1,6 @@
+import WorksComponent from "@/components/main/works/WorksComponent";
+
 export default function Works() {
-    return (
-      <div>
-        Works
-      </div>
-    );
+    return <WorksComponent />
   }
   
