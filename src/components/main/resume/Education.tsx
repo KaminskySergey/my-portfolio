@@ -34,8 +34,8 @@ export default function Education({}: IEducation) {
         <h3 className="font-bold text-black text-[24px] ml-[16px]">Educatoin</h3>
         <ul className="flex flex-wrap">
 {education.map((el, idx) => (
-    <li key={idx} className={`flex flex-col h-[150px] w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-3`}>
-    <div className={`rounded-lg flex flex-col gap-2 ${el.style} transition-all h-full`}>
+    <li key={idx} className={`flex flex-col h-[160px] w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-3`}>
+    <div className={`rounded-lg flex flex-col p-2 gap-2 ${el.style} transition-all h-full`}>
     <div className=" flex items-center ml-2 mt-2 gap-2 rounded-t-lg">
         <Image src={`/education.svg`} alt={el.name} width={32} height={32}/>
     </div>

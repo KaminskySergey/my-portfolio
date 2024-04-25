@@ -8,7 +8,7 @@ interface IContacts { }
 
 export default function Contacts({ }: IContacts) {
     
-    return <div className="bg-[#F2F3F5] rounded w-full p-2">
+    return <div className="bg-[#F2F3F5] rounded w-full md:w-[50%] xl:w-full  p-2">
         <ul className="flex flex-col gap-3">
             {
                 contactsLinks.map(el => (

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-br from-purple-500 via-blue-500 to-green-400`} style={{ background: 'linear-gradient(45deg, rgba(67, 87, 208, 1) 7%, rgba(201, 80, 195, 1) 100%)'}}>{children}</body>
+      <body className={`${inter.className} bg-gradient-to-br from-purple-500 via-blue-500 to-green-400`} >{children}</body>
     </html>
   );
 }

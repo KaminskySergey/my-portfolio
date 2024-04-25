@@ -12,55 +12,66 @@
 .layout {
   max-width: 1440px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: auto 1fr;
   grid-gap: 20px;
   height: auto;
 }
 
-.aside {
-  grid-column: 1;
-  background-color: white;
-  height: auto;
-}
 
-.content {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-column: 1; /* Изменяем grid-column на 1 для .content */
-}
-
-.header {
-  grid-column: 1; /* Изменяем grid-column на 1 для .header */
-  background-color: white;
-}
-.main {
-  background-color: white;
-}
-
-/* Медиа-запросы для адаптивности */
-
-/* Таблетки и мобильные устройства */
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 1279px) {
   .layout {
-    grid-template-columns: 25% 1fr 8%; 
-  grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-color: #fff; 
+  }
+  .aside {
+    /* grid-column: 1;
+    height: auto;
+    */
+    background-color: white;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main{
+    background-color: white;
+  }
+  
+  .header {
+    background-color: white;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 25% 1fr; 
+  grid-template-rows: auto 1fr; 
   }
 
   .aside {
     grid-row: auto;
-    height: auto;
+    height: auto; 
+    background-color: white;
   }
 
   .content {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-column: 2; /* Ensure content spans the second column */
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .main{
+    background-color: white;
+    width: 100%;
   }
   
   .header {
-    grid-column: 3; /* Ensure header spans the third column */
     background-color: white;
   }
 }
